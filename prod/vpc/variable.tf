@@ -5,4 +5,4 @@ variable "env" {
     type = string
 }
 
-data "aws_caller_identity" "caller" {}
+data "aws_caller_identity" "current" {}
