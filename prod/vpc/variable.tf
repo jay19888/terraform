@@ -1,2 +1,8 @@
-variable "vpc_cidr" {}
-variable "env" {}
+variable "vpc_cidr" {
+    type = string
+}
+variable "env" {
+    type = string
+}
+
+data "aws_caller_identity" "caller" {}
