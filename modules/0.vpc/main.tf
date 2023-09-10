@@ -2,7 +2,7 @@ resource "aws_vpc" "vpc" {
   cidr_block = var.vpc_cidr
   enable_dns_hostnames = true
   enable_dns_support = true
-  tags = merge(map("Name", "${var.env}_VPC"), var.tags)
+  tags = merge(tomap("Name", "${var.env}_VPC"), var.tags)
   lifecycle {
     ignore_changes = [ tags["createc_by"], tags["created_by_arn"] ]
   }
